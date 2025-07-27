@@ -13,3 +13,4 @@ Link za aplikaciju: http://grupa8tim3ooad-001-site1.ktempurl.com/
 Za deploy verziju:
         username: 11246277
         password: 60-dayfreetrial
+Demo video aplikacije: https://github.com/emirakurtovic5/Cineverse-webAplikacija/blob/main/assets/Cineverse.mp4
