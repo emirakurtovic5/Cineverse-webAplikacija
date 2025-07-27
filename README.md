@@ -38,6 +38,7 @@ Ova aplikacija je razvijena kao grupni projekat na drugoj godini studija, u okvi
 - **Registrovani korisnici** mogu:
   - Rezervisati karte
   - Pregledati svoje rezervacije kroz stranicu **"Pregled karata"**
+  - Skenirati QR kod svojih karata koje se nalaze u listi trenutno rezervisanih filmova
 
 - **Pregled karata** sadrži:
   - **Aktivne rezervacije** — filmovi čije projekcije još nisu održane
