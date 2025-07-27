@@ -27,7 +27,6 @@ namespace Cineverse.Controllers
         }
 
         // GET: Film/Details/5
-        // ovdje kada se klikne na details trebaju se isto tako prikazati i projekcije
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -42,7 +41,7 @@ namespace Cineverse.Controllers
                 return NotFound();
             }
 
-            // sada uzimamo projekcije za taj filmi dati id i dvorane
+            
             var projekcije = await _context.Projekcija
                 .Where(p => p.FilmId == id)
                 .Select(p => new
@@ -61,7 +60,7 @@ namespace Cineverse.Controllers
             ViewBag.Projekcije = projekcije;
 
 
-            // sad ih prikazujem
+            
 
             return View(film);
         }
@@ -158,22 +157,6 @@ namespace Cineverse.Controllers
             return View(film);
         }
 
-        [Authorize(Roles = "Administrator")]
-        // POST: Film/Delete/5
-        /*[HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var film = await _context.Film.FindAsync(id);
-            if (film != null)
-            {
-                _context.Film.Remove(film);
-            }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }*/
-
         private bool FilmExists(int id)
         {
             return _context.Film.Any(e => e.Id == id);
@@ -187,7 +170,7 @@ namespace Cineverse.Controllers
             {
                 try
                 {
-                    // 1. Obriši sve karte i rezervacije povezane s projekcijama ovog filma
+                    
                     var projekcijeIds = await _context.Projekcija
                         .Where(p => p.FilmId == id)
                         .Select(p => p.Id)
@@ -206,13 +189,13 @@ namespace Cineverse.Controllers
                     }
                     _context.Rezervacija.RemoveRange(rezervacije);
 
-                    // 2. Obriši projekcije (čak i ako nemaju film)
+                    
                     var sveProjekcije = await _context.Projekcija
                         .Where(p => p.FilmId == id || p.FilmId == null)
                         .ToListAsync();
                     _context.Projekcija.RemoveRange(sveProjekcije);
 
-                    // 3. Obriši film
+                    
                     var film = await _context.Film.FindAsync(id);
                     if (film != null)
                     {
@@ -225,7 +208,7 @@ namespace Cineverse.Controllers
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    // Log the error
+                    
                     return RedirectToAction(nameof(Index));
                 }
             }

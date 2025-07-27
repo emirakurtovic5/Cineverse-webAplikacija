@@ -20,7 +20,7 @@ namespace Cineverse.Controllers
             _context = context;
         }
 
-        // fja za odabir sjedista
+        
         public async Task<IActionResult> Odabir(int projekcijaId)
         {
             var projekcija = await _context.Projekcija

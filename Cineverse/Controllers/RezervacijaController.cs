@@ -178,20 +178,19 @@ namespace Cineverse.Controllers
 
                 try
                 {
-                    // Kreiranje nove rezervacije
+                    
                     var novaRezervacija = new Rezervacija
                     {
                         ProjekcijaId = projekcijaId,
                         KorisnikId = userId,
-                        //CijenaId = cijena.Id,
                         Status = "Potvrđena"
                     };
 
-                    // dodavanje rezervacije u bazu
+                    
                     _context.Rezervacija.Add(novaRezervacija);
                     await _context.SaveChangesAsync();
 
-                    // Kreiranje karata za svako odabrano sjedište
+                    
                     foreach (var sjedisteId in odabranaSjedista)
                     {
                         var karta = new Karta
@@ -253,8 +252,7 @@ namespace Cineverse.Controllers
         }
 
         // POST: Rezervacija/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,ProjekcijaId,Status,KorisnikId,CijenaId")] Rezervacija rezervacija)
@@ -287,8 +285,7 @@ namespace Cineverse.Controllers
         }
 
         // POST: Rezervacija/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,ProjekcijaId,Status,KorisnikId,CijenaId")] Rezervacija rezervacija)
@@ -353,8 +350,7 @@ namespace Cineverse.Controllers
                 await _context.SaveChangesAsync();
             }
 
-            // Preusmjeravanje može biti prilagođeno
-            //return RedirectToAction("Index", "PregledKarata"); // Ili RedirectToAction("PregledKarata")
+            
             return RedirectToAction("PregledKarata");
         }
 

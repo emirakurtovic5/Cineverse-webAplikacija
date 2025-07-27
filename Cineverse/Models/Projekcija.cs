@@ -21,7 +21,7 @@ namespace Cineverse.Models
         [ForeignKey("FilmId")]
         public Film Film { get; set; }
 
-    
+
 
     }
 }

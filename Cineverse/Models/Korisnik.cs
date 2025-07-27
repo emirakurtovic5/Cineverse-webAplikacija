@@ -17,11 +17,9 @@ namespace Cineverse.Models
         [DisplayName("Datum rođenja:")]
         public DateTime? DatumRodjenja { get; set; }
 
-        // Override the inherited properties to make them nullable if needed
         public override string? PhoneNumber { get; set; }
 
-        // If you're having issues with other inherited properties, you might need to override them too
-        // But be careful as this can affect Identity functionality
+        
     }
 }
 
@@ -31,7 +29,7 @@ public class ValidateDate : ValidationAttribute
     {
         if (value == null)
         {
-            return ValidationResult.Success; // Allow null values
+            return ValidationResult.Success; 
         }
 
         if (!(value is DateTime datumRodjenja))
@@ -42,7 +40,7 @@ public class ValidateDate : ValidationAttribute
         DateTime danas = DateTime.Today;
         int godine = danas.Year - datumRodjenja.Year;
 
-        // Ako korisnik još nije imao rođendan ove godine
+        
         if (datumRodjenja.Date > danas.AddYears(-godine))
         {
             godine--;

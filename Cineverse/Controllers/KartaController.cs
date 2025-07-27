@@ -50,7 +50,7 @@ namespace Cineverse.Controllers
 
                 foreach (var sjedisteId in sjedista)
                 {
-                    // Provjeri da li sjedište već ima kartu za ovu rezervaciju
+                    
                     var postojecaKarta = await _context.Karta
                         .FirstOrDefaultAsync(k => k.RezervacijaId == rezervacijaId && k.SjedisteId == sjedisteId);
 
@@ -214,7 +214,7 @@ namespace Cineverse.Controllers
             if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
                 return Redirect(returnUrl);
 
-            return RedirectToAction("Index"); // fallback
+            return RedirectToAction("Index"); 
         }
 
 

@@ -101,14 +101,6 @@
                 </a>
             </div>
         </div>
-
-        @* Dodatne informacije *@
-        <!---<div style="margin-top: 2rem; padding: 1rem; background-color: #1a1a1a; border-radius: 5px; border-left: 4px solid #FFA500;">
-            <p style="margin: 0; font-size: 0.9rem; color: #ccc;">
-                <strong>Napomena:</strong> Nakon potvrde rezervacije, sjedišta će biti rezervirana za vas.
-                Molimo da se pojavite u kinu najmanje 15 minuta prije početka projekcije.
-            </p>
-        </div>-->
     </div>
 </div>
 
@@ -117,12 +109,12 @@
         const btn = this;
         const originalText = btn.innerHTML;
 
-        // Show loading state
+        
         btn.innerHTML = 'Rezerviram...';
         btn.disabled = true;
         btn.style.backgroundColor = '#999';
 
-        // Submit the form
+        
         document.getElementById('kreirajRezervacijuForm').submit();
     });
 </script>

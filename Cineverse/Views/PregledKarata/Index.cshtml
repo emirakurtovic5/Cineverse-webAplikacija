@@ -121,7 +121,7 @@
         }
 </style>
 
-<!-- Učitaj jsQR biblioteku samo jednom -->
+
 <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
 
 <div class="tabs-container">
@@ -224,7 +224,7 @@
                                     console.log("QR kod:", code.data);
 
                                     try {
-                                        // Dobiti CSRF token
+                                        
                                         const token = document.querySelector('input[name="__RequestVerificationToken"]').value;
 
                                         const response = await fetch('/PregledKarata/validacijaQRKoda', {

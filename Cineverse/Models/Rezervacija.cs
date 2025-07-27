@@ -16,11 +16,6 @@ namespace Cineverse.Models
         [ForeignKey("Korisnik")]
         public string KorisnikId { get; set; }
 
-        /*[ForeignKey("Cijena")]
-        public int CijenaId { get; set; }*/
-
-
-
         [ForeignKey("KorisnikId")]
         public Korisnik Korisnik { get; set; }
 

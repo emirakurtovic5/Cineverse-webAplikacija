@@ -339,11 +339,11 @@ namespace Cineverse.Controllers
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             if (userId == null) return Unauthorized();
 
-            // Regeneriši QR kod
+            
             string qrText = $"kartaid:{karta.Id}|rezervacijaid:{karta.RezervacijaId}|Korisnik:{userId}|Film:{projekcija.Film.NazivFilma}|Datum:{projekcija.Datum:yyyy-MM-dd}|Vrijeme:{projekcija.Vrijeme:HH:mm}|Red:{karta.Sjediste.Red}|Kolona:{karta.Sjediste.Kolona}";
             string qrKodBase64 = _qrService.GenerateQrCodeBase64(qrText);
 
-            // Pronađi odgovarajući pregled karata
+            
             var pregled = await _context.PregledKarata
                 .FirstOrDefaultAsync(pk => pk.KorisnikId == userId && pk.QRKod == qrKodBase64);
 
@@ -354,7 +354,7 @@ namespace Cineverse.Controllers
 
             _context.Karta.Remove(karta);
 
-            // Obriši rezervaciju ako je ovo bila posljednja karta
+            
             bool imaJosKarata = await _context.Karta.AnyAsync(k => k.RezervacijaId == karta.RezervacijaId && k.Id != karta.Id);
             if (!imaJosKarata)
             {
@@ -419,7 +419,6 @@ namespace Cineverse.Controllers
             return popustProcenat;
         }
 
-        //moze primat qr kod a i ne mora ugl treba ga validirati
         [HttpPost]
         public async Task<IActionResult> validacijaQRKoda(string qrText, int kartaId)
         {

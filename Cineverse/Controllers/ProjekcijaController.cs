@@ -59,9 +59,13 @@ namespace Cineverse.Controllers
         }
 
         // POST: Projekcija/Create
+<<<<<<< Updated upstream
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         
+=======
+        [Authorize(Roles = "Administrator")]
+>>>>>>> Stashed changes
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Administrator")]
@@ -98,9 +102,13 @@ namespace Cineverse.Controllers
         }
 
         // POST: Projekcija/Edit/5
+<<<<<<< Updated upstream
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         
+=======
+        [Authorize(Roles = "Administrator")]
+>>>>>>> Stashed changes
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Administrator")]
