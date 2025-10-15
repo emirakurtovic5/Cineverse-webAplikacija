@@ -2,25 +2,6 @@
 
 Ova aplikacija je razvijena kao grupni projekat na drugoj godini studija, u okviru predmeta **Objektno-orijentisana analiza i dizajn**.
 
----
-
-
-
----
-
-## 🧪 Testni korisnici
-
-| Uloga        | Email                       | Lozinka          |
-|--------------|-----------------------------|-------------------|
-| Admin        | `admin@gmail.com`           | `Password?123`    |
-| Kino radnik  | `kinoradnik@gmail.com`      | `Password?123`    |
-| Korisnik     | `emirakurtovic2022@gmail.com` | `Emira-12345`     |
-
----
-
-
-
----
 
 ## 🎥 Demo video aplikacije
 📺 [Klikni ovdje za video](https://github.com/emirakurtovic5/Cineverse-webAplikacija/blob/main/assets/Cineverse.mp4)
