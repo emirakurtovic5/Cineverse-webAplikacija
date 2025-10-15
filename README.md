@@ -4,8 +4,7 @@ Ova aplikacija je razvijena kao grupni projekat na drugoj godini studija, u okvi
 
 ---
 
-## 🔗 Link do aplikacije
-🌐 [Cineverse Web Aplikacija](http://grupa8tim3ooad-001-site1.ktempurl.com/)
+
 
 ---
 
@@ -19,9 +18,7 @@ Ova aplikacija je razvijena kao grupni projekat na drugoj godini studija, u okvi
 
 ---
 
-## 🛠 Deploy (test server)
-- **Username:** `11246277`  
-- **Password:** `60-dayfreetrial`
+
 
 ---
 
