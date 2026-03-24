@@ -10,8 +10,8 @@
 
 <style>
     body {
-        background-color: #121212; /* Dark background */
-        color: white; /* White text for entire page */
+        background-color: #121212; 
+        color: white; 
         font-family: Arial, sans-serif;
     }
 
@@ -20,25 +20,25 @@
         width: 25px;
         height: 25px;
         margin: 2px;
-        background: #333; /* Darker seat background */
+        background: #333; 
         text-align: center;
         line-height: 25px;
         cursor: pointer;
         border: 1px solid #555;
-        color: white !important; /* White seat numbers */
+        color: white !important; 
         transition: all 0.2s;
     }
 
     .predzadnji-red {
-        background-color: #1a5276; /* Darker blue for VIP */
+        background-color: #1a5276; 
     }
 
     .zadnji-red {
-        background-color: #6a1b9a; /* Darker pink for Lovebox */
+        background-color: #6a1b9a; 
     }
 
     input[type="checkbox"]:checked + .sjediste-label {
-        background-color: #e67e00 !important; /* Orange for selected */
+        background-color: #e67e00 !important; 
         color: white !important;
         border-color: #e67e00;
     }
@@ -53,8 +53,8 @@
     }
 
     .sjedista-container, .legenda-container {
-        background: transparent !important; /* Transparent background */
-        color: white; /* White text */
+        background: transparent !important; 
+        color: white; 
     }
 
     .legenda-item {
@@ -73,7 +73,7 @@
 
     .submit-btn {
         padding: 10px 25px;
-        background: #e67e00; /* Orange button */
+        background: #e67e00; 
         color: white;
         border: none;
         border-radius: 4px;
@@ -89,7 +89,7 @@
     .film-title {
         margin-bottom: 10px;
         color: white;
-        font-size: 24px; /* Larger font size for film title */
+        font-size: 24px; 
         font-weight: bold;
     }
 
@@ -98,7 +98,7 @@
         color: #bbb;
     }
 
-    /* Style for occupied seats */
+    
     .zauzeto {
         display: inline-block;
         width: 25px;
@@ -114,13 +114,13 @@
         margin-top: 0;
         margin-bottom: 15px;
         color: white;
-        font-size: 16px; /* Smaller font size for legend title */
+        font-size: 16px; 
     }
 </style>
 
 <div class="container-wrapper">
     <div class="legenda-container">
-        <h4 class="legenda-title">LEGENDA</h4> <!-- Changed to use class instead of inline style -->
+        <h4 class="legenda-title">LEGENDA</h4> 
         <div class="legenda-item">
             <div class="legenda-color" style="background-color: #e67e00;"></div>
             <span>Odabrano</span>
@@ -144,7 +144,7 @@
     </div>
 
     <div class="sjedista-container">
-        <h2 class="film-title">@film.NazivFilma</h2> <!-- Changed from h3 to h2 for larger size -->
+        <h2 class="film-title">@film.NazivFilma</h2> 
         <p class="dvorana-info">Dvorana: @dvorana.NazivDvorane</p>
 
 

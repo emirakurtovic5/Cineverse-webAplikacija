@@ -85,7 +85,7 @@ public partial class MainWindow : Window
 
     private void ProcessQRResult(string qrText)
     {
-        // Ista logika obrade kao u Windows Forms primjeru
+        
     }
 
     private void StopButton_Click(object sender, RoutedEventArgs e)

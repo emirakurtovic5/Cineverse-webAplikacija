@@ -23,7 +23,7 @@ public class QRScannerForm : Form
         this.Width = 800;
         this.Height = 600;
 
-        // PictureBox za prikaz video snimka
+        
         pictureBox = new PictureBox
         {
             Size = new Size(640, 480),
@@ -62,7 +62,7 @@ public class QRScannerForm : Form
         timer = new Timer { Interval = 1000 };
         timer.Tick += Timer_Tick;
 
-        // Dodavanje kontrola na formu
+        
         this.Controls.Add(pictureBox);
         this.Controls.Add(startButton);
         this.Controls.Add(stopButton);
@@ -113,7 +113,7 @@ public class QRScannerForm : Form
 
     private void ProcessQRResult(string qrText)
     {
-        // Ovdje implementirajte logiku za obradu QR koda
+        
         if (qrText.Contains("rezervacijaid:"))
         {
             var parts = qrText.Split('|');
@@ -124,7 +124,7 @@ public class QRScannerForm : Form
                 var reservationId = reservationPart.Split(':')[1];
                 MessageBox.Show($"Pronađena validna karta! Rezervacija ID: {reservationId}");
 
-                // Pozovite metodu za validaciju rezervacije
+                
                 ValidateReservation(reservationId);
             }
         }
@@ -136,8 +136,7 @@ public class QRScannerForm : Form
 
     private void ValidateReservation(string reservationId)
     {
-        // Ovdje implementirajte logiku za validaciju sa serverom
-        // Možete koristiti HttpClient za API poziv
+        
     }
 
     private void StopButton_Click(object sender, EventArgs e)
