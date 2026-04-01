@@ -1,14 +1,14 @@
-# 🎬 Grupa8-Tim3 — Cineverse Web Aplikacija
+# Grupa8-Tim3 — Cineverse Web Aplikacija
 
 Ova aplikacija je razvijena kao grupni projekat na drugoj godini studija, u okviru predmeta **Objektno-orijentisana analiza i dizajn**.
 
 
-## 🎥 Demo video aplikacije
-📺 [Klikni ovdje za video](https://github.com/emirakurtovic5/Cineverse-webAplikacija/blob/main/assets/Cineverse.mp4)
+## Demo video aplikacije
+[Klikni ovdje za video](https://github.com/emirakurtovic5/Cineverse-webAplikacija/blob/main/assets/Cineverse.mp4)
 
 ---
 
-## 📝 Opis funkcionalnosti
+## Opis funkcionalnosti
 
 - **Gost korisnik** ima pristup listi filmova i detaljima o svakom filmu, uključujući:
   - Poster, naziv, žanr, trajanje, glumce, režisera, sinopsis, trailer, projekcije
